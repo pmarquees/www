@@ -475,6 +475,10 @@ footer {
 
 /*@media only screen and (max-width: 480px){}*/
 
+body.-prod .-dev {
+	display: none;
+}
+
 @media (max-width: 980px) {
 
 .container img {
