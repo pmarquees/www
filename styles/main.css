@@ -284,6 +284,14 @@ body .align-middle {
 	vertical-align: middle;
 }
 
+body .align-middle-filler {
+	display: inline-block;
+	width: 1px;
+	height: 100%;
+	margin-right: -1px;
+	vertical-align: middle;
+}
+
 .wrapper {
 	width: 100%;
 	margin-left: auto;
@@ -308,6 +316,30 @@ body .align-middle {
 .list-linear,
 .list-linear > li {
 	display: inline-block;
+}
+
+.nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+}
+
+.nav.-fixed {
+	position: fixed;
+	top: 0;
+	bottom: inherit;
+}
+
+.nav-menu {
+	margin: 0 auto;
+}
+
+.nav-logo {
+	display: none;
 }
 
 .main-nav {
@@ -376,22 +408,45 @@ body .align-middle {
 
 .section-hero {
 	color: #fff;
-	height: 600px;
-	background: #e9e0df url('../images/amsterdam.jpg') center center no-repeat;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../images/amsterdam.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
 }
 
 .section-hero .wrapper {
 	height: 100%;
 }
 
-.section-hero .section-figure {
-	height: 100%;
+.hero-logo {
+	margin: 0;
 }
 
-.hero-logo {
-	width: 300px;
+.hero-logo-img,
+.hero-logo-text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.hero-logo-img {
+	width: 200px;
+	margin-right: 20px;
+}
+
+.hero-logo-text,
+.hero-teaser {
+	font-weight: 700;
+	text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2), 0px -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.hero-logo-text {
+	font-size: 2.5em;
+}
+
+.hero-teaser {
+	font-size: 1.25em;
+	margin: 0 0 30px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -468,6 +523,14 @@ body .align-middle {
 	width: 85.71428%;
 }
 
+.nav-open {
+	display: none;
+}
+
+.nav-cta {
+	display: none;
+}
+
 .main-nav {
 	text-transform: uppercase;
 }
@@ -495,6 +558,10 @@ body.-has-transitions-enabled .main-nav {
 
 .main-nav li:first-child {
 	margin-left: 0;
+}
+
+.section-hero {
+	padding-bottom: 60px;
 }
 
 }
@@ -527,8 +594,12 @@ body.-has-transitions-enabled .main-nav {
 	margin-left: 15px;
 }
 
-.hero-logo {
-	width: 200px;
+.hero-logo-img {
+	width: 100px;
+}
+
+.hero-logo-text {
+	font-size: 1.875em;
 }
 
 }
