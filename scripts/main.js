@@ -68,6 +68,9 @@ define('components', function () {
 	}
 
 })
+require('components').create('form', {
+	initialize: function ( ) { }
+} );
 require('components').create('google-analytics', {
 	initialize: function ( ) { }
 } );
@@ -104,9 +107,6 @@ require( 'components' ).create( 'navigation', {
 		event.preventDefault();
 		this.$el.find( '.nav-menu' ).toggleClass( '-opened' );
 	}
-} );
-require('components').create('newsletter-register', {
-	initialize: function ( ) { }
 } );
 require('components').create('toggle', {
 	initialize: function ( ) { }
